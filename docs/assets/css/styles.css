@@ -1,11 +1,140 @@
+@font-face {
+  font-family: 'Lato-Hairline';
+  src: url(../fonts/Lato-Hairline.ttf); }
+@font-face {
+  font-family: 'Lato-Light';
+  src: url(../fonts/Lato-Light.ttf); }
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url(../fonts/Lato-Bold.ttf); }
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url(../fonts/Lato-Regular.ttf); }
+@font-face {
+  font-family: 'Sansation-Bold';
+  src: url(../fonts/Sansation_Bold.ttf); }
+@font-face {
+  font-family: 'Sansation-Light';
+  src: url(../fonts/Sansation_Light.ttf); }
+@font-face {
+  font-family: 'Sansation-Regular';
+  src: url(../fonts/Sansation_Regular.ttf); }
+.nav_wrapper {
+  height: 100px;
+  width: 100vw;
+  background-color: #0A2141;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+
+.nav_link-wrapper {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  position: relative; }
+
+.nav_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #F7F8F2;
+  font-family: Lato-Hairline;
+  flex-grow: 1;
+  font-size: 15px; }
+
+#link-about:hover ~ .nav_active-underline {
+  left: 25%;
+  transition: .3s ease-in-out; }
+
+#link-work:hover ~ .nav_active-underline {
+  left: 50%;
+  transition: .3s ease-in-out; }
+
+#link-contact:hover ~ .nav_active-underline {
+  left: 75%;
+  transition: .3s ease-in-out; }
+
+.nav_language-container {
+  height: 100%;
+  width: calc(50% / 4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F7F8F2;
+  font-family: Lato-Hairline;
+  font-size: 15px;
+  transition: .3s linear; }
+  .nav_language-container:hover {
+    background-color: #F7F8F2;
+    color: #0A2141;
+    transition: .3s linear; }
+
+.nav_active-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  height: 1px;
+  width: 25%;
+  background-color: #F7F8F2;
+  transition: .3s ease-in-out; }
+
+.nav_logo {
+  position: absolute;
+  left: 30px;
+  height: 90px;
+  width: 170px; }
+
 body {
   margin: 0; }
 
-.wrapper {
-  height: 100vh;
+.intro_wrapper {
+  height: calc(100vh - 100px);
   width: 100vw;
-  background-color: #0A2141;
-  background-image: url("../images/ZB-Logo-White.png");
-  background-size: 300px auto;
+  background: linear-gradient(180deg, #0A2141 0%, #F7F8F2 1087.17%);
+  background-image: url("../images/rocket-lg.png"), linear-gradient(180deg, #0A2141 0%, #F7F8F2 1087.17%);
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: bottom;
+  display: flex;
+  align-items: center;
+  overflow: hidden; }
+
+.intro_container {
+  color: #F7F8F2;
+  text-align: center;
+  width: 75%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; }
+
+.intro_logo {
+  width: 50%;
+  height: auto; }
+
+.intro_content {
+  font-family: Lato-Hairline;
+  font-size: 2.5vw;
+  width: 65%;
+  margin-top: 20px; }
+
+.intro_btn {
+  font-family: Lato-Hairline;
+  font-size: 2vw;
+  margin-top: 20px;
+  padding-bottom: 1.5%;
+  border-bottom: 1px solid #52B3E0;
+  animation: fall-in 3s ease;
+  transition: .2s ease-in-out; }
+  .intro_btn:hover {
+    padding-bottom: 1%;
+    transition: .2s ease-in-out; }
+
+@keyframes fall-in {
+  0% {
+    padding-bottom: 100%; }
+  100% {
+    padding-bottom: 1.5%; } }

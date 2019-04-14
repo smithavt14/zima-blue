@@ -1,0 +1,76 @@
+.nav_wrapper {
+	height: 100px;
+	width: 100vw;
+	background-color: $oxford-blue;
+	display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav_link-wrapper {
+	height: 100%;
+	width: 50%;
+  display: flex;
+  position: relative;
+}
+
+.nav_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: $spring-wood;
+  font-family: Lato-Hairline;
+  flex-grow: 1;
+  font-size: 15px;
+}
+
+#link-about:hover ~ .nav_active-underline {
+  left: 25%;
+  transition: .3s ease-in-out;
+}
+
+#link-work:hover ~ .nav_active-underline {
+  left: 50%;
+  transition: .3s ease-in-out;
+}
+
+#link-contact:hover ~ .nav_active-underline {
+  left: 75%;
+  transition: .3s ease-in-out;
+}
+
+.nav_language-container {
+  height: 100%;
+  width: calc(50% / 4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $spring-wood;
+  font-family: Lato-Hairline;
+  font-size: 15px;
+  transition: .3s linear;
+  &:hover {
+    background-color: $spring-wood;
+    color: $oxford-blue;
+    transition: .3s linear;
+  }
+}
+
+.nav_active-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  height: 1px;
+  width: 25%;
+  background-color: $spring-wood;
+  transition: .3s ease-in-out;
+}
+
+.nav_logo {
+  position: absolute;
+  left: 30px;
+  height: 90px;
+  width: 170px;
+}
