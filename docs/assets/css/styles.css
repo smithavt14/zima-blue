@@ -246,7 +246,7 @@
 
 @media (max-width: 750px) {
   .intro_wrapper {
-    height: 130vh;
+    height: 175vh;
     background: linear-gradient(180deg, #0A2141 0%, #F7F8F2 750%);
     background-image: url("../images/mobile-rocket.png"), linear-gradient(180deg, #0A2141 0%, #F7F8F2 750%);
     background-size: contain;
@@ -276,13 +276,13 @@
     background-repeat: no-repeat; }
 
   .intro_content {
-    font-family: Lato-Hairline;
+    font-family: Lato-Light;
     font-size: 25px;
     width: 90%;
     margin-top: 20px; }
 
   .intro_btn {
-    font-family: Lato-Hairline;
+    font-family: Lato-Light;
     font-size: 20px;
     margin-top: 25px;
     padding-bottom: 1.5%;
