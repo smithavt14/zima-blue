@@ -54,7 +54,7 @@
 
 @media (max-width: 750px) {
   .intro_wrapper {
-    height: 175vh;
+    height: 200vh;
     background: linear-gradient(180deg, #0A2141 0%, #F7F8F2 750%);
     background-image: url('../images/mobile-rocket.png'), linear-gradient(180deg, #0A2141 0%, #F7F8F2 750%);
     background-size: contain;
@@ -69,7 +69,7 @@
     color: $spring-wood;
     text-align: center;
     width: 100%;
-    height: 50%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,9 +78,9 @@
   }
 
   .intro_logo {
-    width: 80%;
-    height: 30%;
-    background-image: url('../images/zb-logo-full-white.png');
+    width: 85%;
+    height: 25%;
+    background-image: url('../images/zb-logo-full.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

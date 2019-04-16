@@ -97,9 +97,9 @@
     height: 125px;
     width: 125px;
     border-radius: 50%;
-    background-color: $zima-blue;
+    background: linear-gradient(180deg, $zima-blue 0%, white 200%);
     position: fixed;
-    bottom: -50px;
+    bottom: -62.5px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -112,7 +112,7 @@
     border-radius: 10px;
     background-color: $spring-wood;
     position: fixed;
-    bottom: 45px;
+    bottom: 40px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
