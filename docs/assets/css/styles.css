@@ -19,6 +19,10 @@
 @font-face {
   font-family: 'Sansation-Regular';
   src: url(../fonts/Sansation_Regular.ttf); }
+.hide {
+  display: none;
+  transition: 1s ease-in-out; }
+
 @media (min-width: 751px) {
   .nav_wrapper {
     height: 100px;
@@ -103,43 +107,96 @@
     bottom: -50px;
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    transition: .3s ease-in-out; }
 
   .mbl-nav_hamburger {
     width: 50px;
-    height: 3px;
+    height: 5px;
     border-radius: 10px;
     background-color: #F7F8F2;
-    position: absolute;
-    top: 30px;
+    position: fixed;
+    bottom: 45px;
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    transition: .3s ease-in-out; }
     .mbl-nav_hamburger::before {
       content: "";
       width: 50px;
-      height: 3px;
+      height: 5px;
       border-radius: 10px;
       background-color: #F7F8F2;
       position: absolute;
       top: 12px;
       left: 50%;
       -webkit-transform: translateX(-50%);
-      transform: translateX(-50%); }
+      transform: translateX(-50%);
+      transition: .3s ease-in-out; }
     .mbl-nav_hamburger::after {
       content: "";
       width: 50px;
-      height: 3px;
+      height: 5px;
       border-radius: 10px;
       background-color: #F7F8F2;
       position: absolute;
       top: 24px;
       left: 50%;
       -webkit-transform: translateX(-50%);
-      transform: translateX(-50%); } }
-body {
-  margin: 0; }
+      transform: translateX(-50%);
+      transition: .3s ease-in-out; }
 
+  .mbl-nav_cross {
+    bottom: 30px;
+    background: rgba(0, 0, 0, 0);
+    transition: .3s ease-in-out; }
+    .mbl-nav_cross::before {
+      top: 0;
+      transform: translateX(-50%) rotate(135deg);
+      transition: .3s ease-in-out; }
+    .mbl-nav_cross::after {
+      top: 0;
+      transform: translateX(-50%) rotate(-135deg);
+      transition: .3s ease-in-out; }
+
+  .mbl-nav_menu-container-lg {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) scale(15);
+    transform: translateX(-50%) scale(15);
+    transition: .3s ease-in-out; }
+
+  .mbl-nav_link-container {
+    position: fixed;
+    top: 0;
+    height: 80vh;
+    width: 95vw;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+  .mbl-nav_link {
+    font-size: 50px;
+    color: #F7F8F2;
+    font-family: Lato-Bold;
+    transition: 1s ease-in-out;
+    margin: 5% 0; }
+
+  .mbl-nav_zb-logo {
+    position: absolute;
+    bottom: 0px;
+    height: 10%;
+    width: 100%;
+    background-image: url("../images/zb-logo-white.png");
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat; }
+
+  .hide {
+    display: none;
+    transition: 1s ease-in-out; } }
 .intro_wrapper {
   height: calc(100vh - 100px);
   width: 100vw;
@@ -164,7 +221,11 @@ body {
 
 .intro_logo {
   width: 50%;
-  height: auto; }
+  height: 30%;
+  background-image: url("../images/zb-logo-white.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 .intro_content {
   font-family: Lato-Hairline;
@@ -178,14 +239,63 @@ body {
   margin-top: 20px;
   padding-bottom: 1.5%;
   border-bottom: 1px solid #52B3E0;
-  animation: fall-in 5s ease;
   transition: .2s ease-in-out; }
   .intro_btn:hover {
     padding-bottom: 1%;
     transition: .2s ease-in-out; }
 
+@media (max-width: 750px) {
+  .intro_wrapper {
+    height: 130vh;
+    background: linear-gradient(180deg, #0A2141 0%, #F7F8F2 750%);
+    background-image: url("../images/mobile-rocket.png"), linear-gradient(180deg, #0A2141 0%, #F7F8F2 750%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-start; }
+
+  .intro_container {
+    color: #F7F8F2;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center; }
+
+  .intro_logo {
+    width: 80%;
+    height: 30%;
+    background-image: url("../images/zb-logo-full-white.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+
+  .intro_content {
+    font-family: Lato-Hairline;
+    font-size: 25px;
+    width: 90%;
+    margin-top: 20px; }
+
+  .intro_btn {
+    font-family: Lato-Hairline;
+    font-size: 20px;
+    margin-top: 25px;
+    padding-bottom: 1.5%;
+    border-bottom: 1px solid #52B3E0;
+    transition: .2s ease-in-out; }
+    .intro_btn:hover {
+      padding-bottom: 1%;
+      transition: .2s ease-in-out; } }
 @keyframes fall-in {
   0% {
     padding-bottom: 100%; }
   100% {
     padding-bottom: 1.5%; } }
+body {
+  margin: 0;
+  -webkit-overflow-scrolling: touch; }

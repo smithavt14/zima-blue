@@ -1,66 +1,9 @@
 @import "colors";
 @import "fonts";
 @import "navigation";
+@import "intro";
 
 body {
   	margin: 0;
-}
-
-.intro_wrapper {
-	height: calc(100vh - 100px);
-	width: 100vw;
-  background: linear-gradient(180deg, #0A2141 0%, #F7F8F2 1087.17%);
-  background-image: url('../images/rocket-lg.png'), linear-gradient(180deg, #0A2141 0%, #F7F8F2 1087.17%);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-.intro_container {
-  color: $spring-wood;
-  text-align: center;
-  width: 75%;
-  height: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-}
-
-.intro_logo {
-  width: 50%;
-  height: auto;
-}
-
-.intro_content {
-  font-family: Lato-Hairline;
-  font-size: 2.5vw;
-  width: 65%;
-  margin-top: 20px;
-}
-
-.intro_btn {
-  font-family: Lato-Hairline;
-  font-size: 2vw;
-  margin-top: 20px;
-  padding-bottom: 1.5%;
-  border-bottom: 1px solid $zima-blue;
-  animation: fall-in 5s ease; 
-  transition: .2s ease-in-out;
-  &:hover {
-    padding-bottom: 1%;
-    transition: .2s ease-in-out;
-  }
-}
-
-@keyframes fall-in {
-  0% {
-    padding-bottom: 100%;
-  }
-  100% {
-    padding-bottom: 1.5%;
-  }
+    -webkit-overflow-scrolling: touch;
 }

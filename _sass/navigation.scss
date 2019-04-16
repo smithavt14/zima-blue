@@ -1,3 +1,8 @@
+.hide {
+  display: none;
+  transition: 1s ease-in-out;
+}
+
 @media (min-width: 751px) {
   .nav_wrapper {
     height: 100px;
@@ -98,22 +103,24 @@
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+    transition: .3s ease-in-out;
   }
 
   .mbl-nav_hamburger {
     width: 50px;
-    height: 3px;
+    height: 5px;
     border-radius: 10px;
     background-color: $spring-wood;
-    position: absolute;
-    top: 30px;
+    position: fixed;
+    bottom: 45px;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+    transition: .3s ease-in-out;
     &::before {
       content: "";
       width: 50px;
-      height: 3px;
+      height: 5px;
       border-radius: 10px;
       background-color: $spring-wood;
       position: absolute;
@@ -121,11 +128,12 @@
       left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
+      transition: .3s ease-in-out;
     }
     &::after {
       content: "";
       width: 50px;
-      height: 3px;
+      height: 5px;
       border-radius: 10px;
       background-color: $spring-wood;
       position: absolute;
@@ -133,6 +141,67 @@
       left: 50%;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
+      transition: .3s ease-in-out;
     }
+  }
+
+  .mbl-nav_cross {
+    bottom: 30px;
+    background: rgba(0,0,0,0);
+    transition: .3s ease-in-out;
+    &::before {
+      top: 0;
+      transform: translateX(-50%) rotate(135deg);
+      transition: .3s ease-in-out;
+    }
+    &::after {
+      top: 0;
+      transform: translateX(-50%) rotate(-135deg);
+      transition: .3s ease-in-out;
+    }
+  }
+
+  .mbl-nav_menu-container-lg {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) scale(15);
+    transform: translateX(-50%) scale(15);
+    transition: .3s ease-in-out;
+  }
+
+  .mbl-nav_link-container {
+    position: fixed;
+    top: 0;
+    height: 80vh;
+    width: 95vw;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mbl-nav_link {
+    font-size: 50px;
+    color: $spring-wood;
+    font-family: Lato-Bold;
+    transition: 1s ease-in-out;
+    margin: 5% 0;
+  }
+
+  .mbl-nav_zb-logo {
+    position: absolute;
+    bottom: 0px;
+    height: 10%;
+    width: 100%;
+    background-image: url('../images/zb-logo-white.png');
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+
+  .hide {
+    display: none;
+    transition: 1s ease-in-out;
   }
 }
